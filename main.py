@@ -10,7 +10,7 @@ from structs import TodoRequest
 
 app = FastAPI()
 
-origins = ["http://localhost", "http://localhost:5173"]
+origins = ["http://localhost", "http://localhost:5173", "https://frontend-vert-kappa-79.vercel.app"]
 
 app.add_middleware(
     CORSMiddleware,
