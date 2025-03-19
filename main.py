@@ -10,16 +10,17 @@ from structs import TodoRequest
 
 app = FastAPI()
 
-origins = [
-    "http://localhost",
-    "http://localhost:5173",
-    "https://frontend-vert-kappa-79.vercel.app",
-    "https://frontend-4d9vm62bd-tulio-inoues-projects.vercel.app",
-    ]
+# origins = [
+#     "http://localhost",
+#     "http://localhost:5173",
+#     "https://frontend-vert-kappa-79.vercel.app",
+#     "https://frontend-4d9vm62bd-tulio-inoues-projects.vercel.app",
+#     "https://frontend-ay9u7x38r-tulio-inoues-projects.vercel.app"
+#     ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
